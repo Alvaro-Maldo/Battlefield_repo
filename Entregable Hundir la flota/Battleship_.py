@@ -289,10 +289,13 @@ def disparo_random(u_1,diff):
                 print('''Aunque luchamos ferozmente en la batalla no hempos sido capaces de estar a la altura. Regresemos a puerto y preparemos el contrataque.''')
                 break
             else:
-                print("Te han alcanzado, te quedan", count2, "localizaciones") 
-                diff = diff-1 #Si el ordenador acierta no se entra en el if de la segunda oportunidad para el ordena
-                continue
-        
+                if diff==2:
+                    print("Te han alcanzado, te quedan", count2, "localizaciones") 
+                    diff = diff-1 #Si el ordenador acierta no se entra en el if de la segunda oportunidad para el ordena
+                    continue
+                else:
+                    print("Te han alcanzado, te quedan", count2, "localizaciones") 
+                    break
 
         elif u_1[x,y]==" ":
             u_1[x,y]="-"
@@ -302,7 +305,7 @@ def disparo_random(u_1,diff):
                 diff = diff-1
                 continue
 
-            print("Tu turno")
+            print("\nTu turno")
 
             break
         else:
@@ -344,7 +347,7 @@ la reparación sin descanso, mientras tanto confiamos en su sentido de la estrat
     
     Pulsa 1 para el modo fácil.
     Pulsa 2 para el modo difícil.
-        '''))
+    '''))
 
     #Con un bucle while se van alternando las funciones de disparo hasta que uno de los dos pierda
     while True:
