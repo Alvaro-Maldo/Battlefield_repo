@@ -30,7 +30,6 @@ def barco1_pc(tablero_pc):
         else:
             tablero_pc[pos_1[0],pos_1[1]]="O"
             break
-
 def barco2(u_1):
 
  while True:
@@ -88,7 +87,6 @@ def barco2_pc(tablero_pc):
                 tablero_pc[pos_1[0],pos_1[1]]="O"
                 tablero_pc[pos_2[0],pos_2[1]]="O"
                 return
-
 def barco3(u_1):
 
  while True:
@@ -151,7 +149,6 @@ def barco3_pc(tablero_pc):
                 tablero_pc[pos_2[0],pos_2[1]]="O"
 
                 return
-
 def barco4(u_1):
     while True:
         rand1=random.randint(0,9)
@@ -238,7 +235,6 @@ def inicio(u_1,tablero_pc):
     barco3_pc(tablero_pc)
     barco4_pc(tablero_pc)
 
-
 #Funciones de disparo
 def disparo(tablero_pc,u_empty,u_1):
     
@@ -272,7 +268,6 @@ def disparo(tablero_pc,u_empty,u_1):
         except IndexError:
             print("El disparo no es valido, por favor, introduce un valor del 1-10 tanto en filas como en columnas")
             continue
-
 def disparo_random(u_1,diff):
     
     while True:
